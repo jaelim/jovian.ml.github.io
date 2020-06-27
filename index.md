@@ -9,7 +9,7 @@ A ResNet model was trained, and the notebook URL link: [ResNet-model-notebook](h
 ### Dataset
 
 Following is some sample images selected and displayed:
-![Sample-Img](images/breed-sample.png)
+![Sample-Img](images/breed-samples.png)
 
 Followig is sample images with image augmentations applied (ColorJitter, Horizontal/Vertical Flip, and Rotation):
 ![Aug-Img](images/aug-img.png)
