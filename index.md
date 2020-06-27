@@ -1,37 +1,25 @@
-## Welcome to GitHub Pages
+## Jovian.ML Course Final Project Blog (Author: J. Lim)
 
-You can use the [editor on GitHub](https://github.com/jaelim/jovian.ml.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+In this blog, I applied knowledges and techniques I learned from the course to develop and create an image classification model on Dog Breed Identification dataset. Also, this is my first attempt in creating my own blog, so it is rather not in well-polished format. Nonetheless, the experience was very beneficial, and looking to forward to publish my works whenver opportunities arise.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Dataset is obtained from Kaggle dataset repository URL link: [Dog-breed-identification](https://www.kaggle.com/c/dog-breed-identification/data)
+A ResNet model was trained, and the notebook URL link: [ResNet-model-notebook](https://jovian.ml/jlim00/assignment-05)
 
-### Markdown
+### Dataset
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Following is some sample images selected and displayed:
+![Sample-Img](~/Desktop/breed-sample.png)
 
-```markdown
-Syntax highlighted code block
+Followig is sample images with image augmentations applied (ColorJitter, Horizontal/Vertical Flip, and Rotation):
+![Aug-Img](~/Desktop/aug-img.png)
 
-# Header 1
-## Header 2
-### Header 3
+### Pre-trained Model
 
-- Bulleted
-- List
+A pre-trained model, ResNet-18, was used in model training. The entire network excluding the output layer was unfreezed and trained for 10 epoches in 2 separate stages.
 
-1. Numbered
-2. List
+### The Results
 
-**Bold** and _Italic_ and `Code` text
+The training and validation loss curve is produced and shown
+![model-loss](~/Desktop/loss.png)
 
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/jaelim/jovian.ml.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+At the end of epoch 20, with a trained model used on test dataset, it achieved an accuracy of 72.211%
